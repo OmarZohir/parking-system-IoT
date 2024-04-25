@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">  
+  
+ <hibernate-mapping>  
+  <class name="com.iot.parking.models.Reservation" table="reservations">  
+    <id name="id">  
+     <generator class="assigned"></generator>  
+    </id>  
+    <property name="license_plate"></property>    
+    <property name="spot_id"></property>    
+    <property name="status">
+     	<column name="status" not-null="false" default="PENDING"/>
+     </property>
+    <property name="created_at" not-null="false"></property>            
+  </class>              
+ </hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 5.3//EN"  
+          "http://www.hibernate.org/dtd/hibernate-configuration-5.3.dtd">  
+  
+<hibernate-configuration>  
+  
+    <session-factory>  
+        <property name="hbm2ddl.auto">update</property>  
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>  
+        <property name="connection.url">jdbc:mysql://web0101.zxcs.nl:3306/u32076p27031_parking?autoReconnect=true</property>  
+        <property name="connection.username">u32076p27031_parking</property>  
+        <property name="connection.password">JsdUxBqoJ</property>  
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>  
+        <property name="hibernate.current_session_context_class">thread</property>
+        <!-- <property name="hibernate.show_sql">true</property> -->
+        
+    	<!-- <mapping resource="models/reservation.hbm.xml"/> -->  
+    	 <mapping class="com.iot.parking.models.User" />
+    	 <mapping class="com.iot.parking.models.Reservation" />
+    	 <mapping class="com.iot.parking.models.AccessToken" />
+    	 <mapping class="com.iot.parking.models.Rate" />
+ 	     <mapping class="com.iot.parking.models.Entry" />
+    </session-factory>  
+</hibernate-configuration>  
